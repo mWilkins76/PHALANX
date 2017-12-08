@@ -1,0 +1,25 @@
+package com.isartdigital.platformer.controller;
+import com.isartdigital.platformer.ui.hud.Hud;
+import com.isartdigital.utils.events.TouchEventType;
+import js.html.TouchEvent;
+
+/**
+ * ...
+ * @author Eimin
+ */
+class ControllerTouch extends Controller
+{
+
+	public function new() 
+	{
+		super();
+	}
+	public static function init():Void{
+		Hud.getInstance().btnleft.on (TouchEventType.TOUCH_START, TouchDown);
+	}
+	private function TouchDown(pEvent:TouchEvent):Void {
+		trace(pEvent.target);
+		
+	}
+	
+}
